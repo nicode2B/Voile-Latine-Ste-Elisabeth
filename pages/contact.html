@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mon Site Vitrine</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../assets/img/logo_Ste_Elisabeth.png" alt="Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#">Histoire ▾</a>
+                    <ul class="submenu">
+                        <li><a href="/pages/histoire/">La Sainte Élisabeth</a></li>
+                        <li><a href="/pages/histoire/page2.html">Le Projet</a></li>
+                        <li><a href="/pages/histoire/page3.html">La Rénovation</a></li>
+                        <li><a href="/pages/histoire/">Un Peu d'Histoire</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/activites.html">Activités</a></li>
+                <li><a href="pages/galerie.html">Galerie Photo</a></li>
+                <li><a href="pages/a-propos.html">À propos</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="contact-section">
+            <h1>Contactez-nous</h1>
+            <div class="contact-intro-box">
+                <p>Une question sur la Sainte Élisabeth ou une demande d'information ?</p>
+                <p>Utilisez le formulaire pour me contacter.</p>
+            </div>
+
+            <form id="contactForm" action="../inc/traitement.php" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Entrer votre Nom ..." required minlength="2">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" placeholder="Entrer votre Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sujet">Sujet :</label>
+                    <select id="sujet" name="sujet">
+                        <option value="information">Demande d'information</option>
+                        <option value="activite">Question sur les activités</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Entrer votre message ..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-decouvrir">Envoyer le message</button>
+            </form>
+            <div id="formFeedback"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-links-left">
+                <a href="#">Mentions Légales</a>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Gestion des cookies</a>
+            </div>
+            <div class="footer-plan">
+                <h4>Plan du site</h4>
+                <div class="plan-grid">
+                    <a href="../index.html">Acceuil</a><a href="#">Galerie photo</a><a href="#">Activité</a>
+                    <a href="#">Histoire</a><a href="#">A propos</a><a href="pages/contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <img src="../assets/img/logo_Ste_Elisabeth.png" alt="Logo mini" class="logo">
+            <p>&copy; Voile Latine Ste Élisabeth 2026</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>

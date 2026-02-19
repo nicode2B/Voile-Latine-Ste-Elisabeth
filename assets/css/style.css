@@ -429,3 +429,94 @@ hr {
     align-items: center;
     font-size: 0.7rem;
 }
+
+
+
+/* --------------------------------------- */
+
+
+/* Styles pour la page Contact */
+.container {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('../img/mer.jpg') no-repeat center center fixed;
+    background-size: cover; /* L'image remplit tout l'écran */
+    flex: 1;
+    width: 100%;
+    max-width: none;       /* On retire la limite de largeur du fond */
+    margin: 20px auto;
+    padding: 80px 20px;    /* Espace autour du formulaire */
+    min-height: 600px; /* Prend toute la hauteur moins le header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-intro-box {
+    background-color: var(--primary); /* Fond beige comme le formulaire */
+    border: 1px solid var(--dark);    /* Bordure fine pour le définir */
+    border-radius: 10px;              /* Coins arrondis */
+    padding: 15px 25px;               /* Espace interne */
+    margin-bottom: 25px;              /* Espace avec le formulaire en dessous */
+    text-align: center;               /* Texte centré */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Légère ombre pour le relief */
+}
+
+.contact-intro-box p {
+    margin: 0;                        /* Retire les marges par défaut du texte */
+    font-weight: bold;                /* Met le texte en gras pour le faire ressortir */
+    color: var(--dark);               /* Couleur du texte sombre */
+}
+
+.contact-section {
+    width: 100%;
+    max-width: 800px;      /* C'est seulement le formulaire qui reste limité */
+}
+
+.contact-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    background: var(--primary);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--dark);
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    border-radius: 20px;
+}
+
+#formFeedback {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact-form .btn-decouvrir {
+    display: block;
+    margin: 30px auto 0;
+    width: fit-content;
+}
