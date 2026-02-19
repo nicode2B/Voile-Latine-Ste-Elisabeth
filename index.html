@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Vitrine | Accueil</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="assets/img/logo_Ste_Elisabeth.png" alt="Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#">Histoire ▾</a>
+                    <ul class="submenu">
+                        <li><a href="pages/histoire/page1.html">La Sainte Élisabeth</a></li>
+                        <li><a href="pages/histoire/page2.html">Le Projet</a></li>
+                        <li><a href="pages/histoire/page3.html">La Rénovation</a></li>
+                        <li><a href="pages/histoire/page4.html">Un Peu d'Histoire</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/activites.html">Activités</a></li>
+                <li><a href="pages/galerie.html">Galerie Photo</a></li>
+                <li><a href="pages/a-propos.html">À propos</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+        </section>
+
+         <section class="intro-box">
+            <h2>Découvrez l'histoire de la Ste Elizabeth</h2>
+            <div class="intro-content-wrapper">
+                <div class="intro-text">
+                    <p>Récupération, rénovation, navigation : revivez la nouvelle vie de cette embarcation historique, un récit passionnant du passé vers l'avenir.</p>
+                    <button class="btn-decouvrir">Découvrir</button>
+                </div>
+                <div class="intro-image-placeholder">
+                    <img src="assets/img/mer.jpg" alt="Icon">
+                </div>
+            </div>
+        </section>
+
+        <section class="countdown-section">
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <span class="number">1</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number">59</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number">59</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+
+            <div class="countdown-text">
+                <p>Avant le prochaine évenement</p>
+            </div>
+        </section>
+
+        <section class="events-section">
+            <h2 class="section-title">Activités & Événements</h2>
+
+            <div class="events-grid">
+                <article class="event-card">
+                    <div class="event-image">
+                        <img src="assets/img/mer.jpg" alt="Événement 1">
+                    </div>
+                    <div class="event-text">
+                        <p>Mise à l'eau de la Sainte Élisabeth prévue pour le printemps.</p>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-image">
+                        <img src="assets/img/20250719_221240.jpg" alt="Événement 2">
+                    </div>
+                    <div class="event-text">
+                        <p>Relève du Gouverneur 2025.</p>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-image">
+                        <img src="assets/img/profil.jpg" alt="Événement 3">
+                    </div>
+                    <div class="event-text">
+                        <p>Rassemblement annuel des vieux gréements au Vieux-Port.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="events-footer">
+                <a href="activites.html" class="btn-decouvrir">Voir toutes nos activités</a>
+            </div>
+        </section>
+
+        <section class="slider-section">
+            <h2 class="slider-title">Aperçu de la Galerie</h2>
+            <div class="slider-container">
+                <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+
+                <div class="slider-wrapper">
+                    <div class="slide active"><img src="assets/img/mer.jpg" alt="Galerie 1"></div>
+                    <div class="slide"><img src="assets/img/20250719_221240.jpg" alt="Galerie 2"></div>
+                    <div class="slide"><img src="assets/img/profil.jpg" alt="Galerie 3"></div>
+                </div>
+
+                <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+
+            <div class="slider-footer">
+                <a href="pages/galerie.html" class="btn-decouvrir">VOIR LA GALERIE</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-links-left">
+                <a href="#">Mentions Légales</a>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Gestion des cookies</a>
+            </div>
+            <div class="footer-plan">
+                <h4>Plan du site</h4>
+                <div class="plan-grid">
+                    <a href="#">Acceuil</a><a href="#">Galerie photo</a><a href="#">Activité</a>
+                    <a href="#">Histoire</a><a href="#">A propos</a><a href="pages/contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <img src="assets/img/logo_Ste_Elisabeth.png" alt="Logo mini" class="logo">
+            <p>&copy; Voile Latine Ste Élisabeth 2026</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
