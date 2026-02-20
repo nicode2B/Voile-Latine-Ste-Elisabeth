@@ -63,6 +63,7 @@ body {
     background: url('../img/Présentation\ 2\ Photo\ ph\ jambert\ poster.jpg') center/cover;
     background-position: center 90%;
     background-repeat: no-repeat;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.30);
     width: 100%;
 }
 
@@ -439,37 +440,37 @@ hr {
 .container {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                 url('../img/mer.jpg') no-repeat center center fixed;
-    background-size: cover; /* L'image remplit tout l'écran */
+    background-size: cover;
     flex: 1;
     width: 100%;
-    max-width: none;       /* On retire la limite de largeur du fond */
+    max-width: none;
     margin: 20px auto;
-    padding: 80px 20px;    /* Espace autour du formulaire */
-    min-height: 600px; /* Prend toute la hauteur moins le header */
+    padding: 80px 20px;
+    min-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .contact-intro-box {
-    background-color: var(--primary); /* Fond beige comme le formulaire */
-    border: 1px solid var(--dark);    /* Bordure fine pour le définir */
-    border-radius: 10px;              /* Coins arrondis */
-    padding: 15px 25px;               /* Espace interne */
-    margin-bottom: 25px;              /* Espace avec le formulaire en dessous */
-    text-align: center;               /* Texte centré */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Légère ombre pour le relief */
+    background-color: var(--primary);
+    border: 1px solid var(--dark);
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .contact-intro-box p {
-    margin: 0;                        /* Retire les marges par défaut du texte */
-    font-weight: bold;                /* Met le texte en gras pour le faire ressortir */
-    color: var(--dark);               /* Couleur du texte sombre */
+    margin: 0;
+    font-weight: bold;
+    color: var(--dark);
 }
 
 .contact-section {
     width: 100%;
-    max-width: 800px;      /* C'est seulement le formulaire qui reste limité */
+    max-width: 800px;
 }
 
 .contact-section h1 {
@@ -502,6 +503,19 @@ hr {
     border: 1px solid var(--dark);
     border-radius: 20px;
     font-size: 1rem;
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23384050' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 25px) center;
+    background-size: 16px;
+    padding-right: 45px;
+    cursor: pointer;
 }
 
 .form-group textarea {

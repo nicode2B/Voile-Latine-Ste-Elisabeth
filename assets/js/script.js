@@ -11,23 +11,41 @@ function moveSlide(direction) {
 
 /* --- script formulaire --- */
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
     const feedback = document.getElementById('formFeedback');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
             const nom = document.getElementById('nom').value;
             
             if (nom.length < 2) {
-                e.preventDefault(); // Empêche l'envoi du formulaire
                 feedback.innerText = "Le nom est trop court !";
                 feedback.style.color = "red";
-            } else {
-                // Ici, on laisse le formulaire s'envoyer vers le PHP
-                feedback.innerText = "Envoi en cours...";
-                feedback.style.color = "green";
+                return;
             }
+
+            feedback.innerText = "Envoi en cours...";
+            feedback.style.color = "orange";
+
+            const formData = new FormData(this);
+            fetch(this.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                feedback.innerText = data;
+                feedback.style.color = "green";
+                contactForm.reset();
+            })
+            .catch(error => {
+                feedback.innerText = "Erreur lors de l'envoi.";
+                feedback.style.color = "red";
+            });
         });
     }
 });
